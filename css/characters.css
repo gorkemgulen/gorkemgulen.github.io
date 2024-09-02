@@ -1,0 +1,398 @@
+/* JUMBOTRON ******************************************/
+.jumbotron-container-characters {
+    padding: 3rem 2rem;
+    background-color: #0C2233;
+    margin-bottom: 2rem;
+    color: #FFC045;
+}
+
+/* text-content-characters */
+.text-content-characters {
+    padding-right: 2rem;
+}
+
+.text-content-characters h1 {
+    margin-bottom: 1rem;
+    color: #FFC045;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.text-content-characters .lead-characters {
+    margin-bottom: 1.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.text-content-characters .subtitle-characters {
+    color: #FFC045;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.text-content-characters .btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    background-color: #065471;
+    border: 2px solid #FFC045;
+    color: #FFC045;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.text-content-characters .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #FFC045;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.text-content-characters .btn:hover {
+    color: #0C2233;
+}
+
+.text-content-characters .btn:hover::before {
+    left: 0;
+}
+
+.text-content-characters .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 192, 69, 0.4);
+}
+
+.text-content-characters .btn:active {
+    transform: scale(0.95);
+}
+/* text-content-characters bitiş */
+
+.divider-characters {
+    border-top: 2px solid #FFC045;
+    width: 50%;
+    margin: 1.5rem 0;
+}
+
+/* image-content-characters */
+.image-content-characters {
+    perspective: 1000px;
+}
+
+.image-wrapper-characters {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.image-wrapper-characters:hover {
+    transform: rotateY(5deg) rotateX(5deg);
+}
+
+.image-wrapper-characters img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.image-overlay-characters {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-wrapper-characters:hover .image-overlay-characters {
+    opacity: 1;
+}
+
+.image-wrapper-characters::after {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 0.25rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateZ(-1px);
+}
+
+.image-wrapper-characters:hover::after {
+    opacity: 1;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+}
+
+@media (max-width: 768px) {
+    .text-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Animasyonlar */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+.fade-in-delay {
+    opacity: 0;
+    animation: fadeIn 1.5s 0.5s forwards;
+}
+
+.slide-in {
+    transform: translateX(-50px);
+    opacity: 0;
+    animation: slideIn 1s 0.3s forwards;
+}
+
+.float-in {
+    transform: translateY(50px);
+    opacity: 0;
+    animation: floatIn 1.5s 0.5s forwards;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+.expand {
+    width: 0;
+    animation: expand 1s 0.7s forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes floatIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes expand {
+    to { width: 100%; }
+}
+/* JUMBOTRON BİTİŞ ******************************************/
+
+
+
+/* KARAKTER KARTLARI BAŞLANGIÇ ******************************************/
+/* buton tasarımı */
+#characters-cards .btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    background-color: #065471;
+    border: 2px solid #FFC045;
+    color: #FFC045;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#characters-cards .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #FFC045;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+#characters-cards .btn:hover {
+    color: #0C2233;
+}
+
+#characters-cards .btn:hover::before {
+    left: 0;
+}
+
+#characters-cards .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 192, 69, 0.4);
+}
+
+#characters-cards .btn:active {
+    transform: scale(0.95);
+}
+/* buton tasarımı bitiş */
+
+/* blockquote tasarımı */
+.characters-lotus-quote {
+    position: relative;
+    padding: 15px;
+    margin: 15px 0;
+    background-color: rgba(6, 84, 113, 0.1);
+    border-left: 4px solid #065471;
+    font-style: italic;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .characters-lotus-quote::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-size: 40px;
+    color: #FFC045;
+    opacity: 0.5;
+  }
+  
+  .characters-lotus-quote p {
+    overflow-y: auto;
+    height: 75px;
+    margin: 0;
+    color: #0C2233;
+  }
+  
+  .characters-lotus-quote:hover {
+    transform: translateX(5px);
+    box-shadow: -5px 5px 10px rgba(12, 34, 51, 0.1);
+  }
+  
+  .characters-lotus-quote .characters-blockquote-footer {
+    margin-top: 10px;
+    color: #065471;
+    font-size: 0.9em;
+    text-align: right;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+  
+  .characters-lotus-quote:hover .characters-blockquote-footer {
+    opacity: 1;
+    transform: translateX(-5px);
+  }
+/* blockquote tasarımı bitiş */
+
+/* kart başlıkları tasarımı */
+.characters-lotus-title {
+    position: relative;
+    color: #065471;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 5px;
+    /* margin-bottom: 15px; */
+    transition: all 0.3s ease;
+  }
+  
+  .characters-lotus-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #FFC045;
+    transition: width 0.3s ease;
+  }
+  
+  .characters-lotus-title:hover {
+    color: #0C2233;
+    text-transform: uppercase;
+  }
+  
+  .characters-lotus-title:hover::after {
+    width: 50%;
+  }
+
+  /* kart img tasarımları */
+  .card {
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 228, 196, 0.085);
+    border: solid 2px #FFC045;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(12, 34, 51, 0.2);
+  }
+  
+  .characters-card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 350px; /* Resim yüksekliğini ayarlayın */
+  }
+  
+  .card-img-top {
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-img-secondary {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  
+  .characters-card:hover .card-img-top {
+    transform: translateY(-30%) scale(0.8);
+  }
+  
+  .characters-card:hover .card-img-secondary {
+    transform: translateY(0) scale(1.1);
+    opacity: 1;
+  }
+  
+  .characters-card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255,192,69,0.2), rgba(6,84,113,0.6));
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+  
+  .characters-card:hover .characters-card-img-overlay {
+    opacity: 1;
+  }
+  /* kart img bitiş */
+
+/* kart başlıkları tasarımı bitiş */
+/* KARAKTER KARTLARI BİTİŞ ******************************************/
